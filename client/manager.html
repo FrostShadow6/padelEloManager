@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ELO Manager</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="manager.css">
+    <link rel="stylesheet" href="lib/style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <button id="ranking">Classificació</button>
+        <button id="addMatch">Afegir Resultat</button>
+        <button id="addPlayer">Afegir Jugador</button>
+	</div>
+    <div id="header">
+       <div id="title">Elo Manager</div>
+    </div>
+    <div id="general">
+        <div id="menuRanking">
+            <input type="text" id="tableSearch" placeholder="Busca per nom...">
+            <br>
+            <br>
+            <table id="rankingTable">
+                <tr>
+                    <th>Nom</th>
+                    <th><button id="elo">Elo</button></th>
+                    <th><button id="victories">Victòries</button></th>
+                    <th><button id="derrotes">Derrotes</button></th>
+                    <th><button id="winrate">Winrate</button></th>
+                </tr>   
+            </table>
+        </div>
+        <div id="menuAddMatch">
+            <div id="titleWinners">Indica els guanyadors:</div>
+            <select id="winner1">
+                <option id="optionW1" disabled selected>Guanyador 1</option>
+            </select>
+            <select id="winner2">
+                <option id="optionW2" disabled selected>Guanyador 2</option>
+            </select>
+            <br><br>
+            <div id="titleLosers">Indica els perdedors:</div>
+            <select id="loser1">
+                <option id="optionL1" disabled selected>Perdedor 1</option>
+            </select>
+            <select id="loser2">
+                <option id="optionL2" disabled selected>Perdedor 2</option>
+            </select>
+            <br><br>
+            <button id="sendResult">Afegeix Resultat</button>
+            <div id="variationWinners"></div>
+            <div id="variationLosers"></div>
+        </div>
+        <div id="menuAddPlayer">
+            <input id="newPlayer" placeholder="Nom jugador" maxlength="18"></input><br><br>
+            <button id="sendPlayer">Afegeix jugador</button><br>
+            <div id="confirm"></div>
+        </div>
+    </div>  
+    <script src="manager_view_controller.js"></script>
+</body>
+</html>
